@@ -3,6 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/User";
+import { Session } from "inspector";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -52,13 +53,15 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async session({ session, token }) {
-      if (token) {
-        session.user._id = token._id
-        session.user.isVerified = token.isVerified
-      }
-      return session;
-    },
+    // async session({ session, token }) {
+    //   if (token) {
+    //   //   session.user._id = token._id
+    //   //   session.isVerified = token.isVerified;
+    //   //   session.isAcceptingMessages = token.isAcceptingMessages;
+    //   //   session.USername =
+    //   // }
+    //   return session;
+    // },
     async jwt({ token, user }) {
       if (user) {
         token._id = user._id?.toString();
