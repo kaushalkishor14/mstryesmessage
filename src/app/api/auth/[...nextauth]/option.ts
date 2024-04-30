@@ -60,7 +60,7 @@ export const authOptions: NextAuthOptions = {
     },
     // async session({ session, token }) {
     //   if (token) {
-    //     session.user._id = token._id.toString(); // Added toString() to convert to string
+    //     session.user._id = token._id // Added toString() to convert to string
     //     session.user.isVerified = token.isVerified;
     //     session.user.isAcceptingMessages = token.isAcceptingMessages;
     //     session.user.username = token.username;
