@@ -55,6 +55,16 @@ export async function GET(request:Request){
             }
         )
     } catch (error) {
-        
+
+        console.log("An unexpected error occurs", error)
+        return Response.json(
+                {
+                    success: false,
+                    message:'User not found'
+                },
+                {
+                    status:500
+                }
+            )
     }
 }
