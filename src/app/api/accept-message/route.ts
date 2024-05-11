@@ -108,11 +108,11 @@ export async function GET( request : Request){
   return Response.json(
       {
           success: true,
-          message: "user  found ",
-          isAcceptingMessages : foundUser.isAcceptingMessage
+          isAcceptingMessages : foundUser.
+        isAcceptingMessages
       },
       {
-          status:404
+          status:200
       }
   )
   
