@@ -25,7 +25,7 @@ const Navbar = () => {
                             <Button onClick={() => signOut()}>Logout</Button>
                         </>
                     ) : (
-                        <link href="/sign-in">Login</link>
+                        <link href="/sign-in">Log-in</link>
                     )
                 }
             </div>
