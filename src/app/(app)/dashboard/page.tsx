@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Loader2, RefreshCcw } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Separator } from "@/components/ui/separator";
+import MessageCard from "@/context/ui/MessageCard";
 
 const page = () => {
 
@@ -200,7 +201,7 @@ const page = () => {
       )}
     </Button>
     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
-      {/* {messages.length > 0 ? (
+      {messages.length > 0 ? (
         messages.map((message, index) => (
           <MessageCard
             key={message._id}
@@ -210,7 +211,7 @@ const page = () => {
         ))
       ) : (
         <p>No messages to display.</p>
-      )} */}
+      )}
     </div>
   </div>
   )
